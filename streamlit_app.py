@@ -182,7 +182,7 @@ if not data_filtered.empty:
     ventas_por_producto = data_filtered.groupby('Producto')['Precio Total'].sum().reset_index()
     
     fig_costos_utilidad = px.bar(
-        productos_melted,
+        ventas_por_producto,
         x='Producto',
         y='Monto',
         color='Tipo',
