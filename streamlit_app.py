@@ -65,7 +65,7 @@ with cols_filters_2:
 # --- Filtrado de Datos ---
 data_filtered = df_ventas[
     df_ventas['Sucursal'].isin(sucursal) &
-    df_ventas['Hour'].isin(hora) &
+    df_ventas['Hora'].isin(hora) &
     df_ventas['Nombre_Mes'].isin(mes) &
     (df_ventas['Fecha_Pura'] >= start_date_selected) &
     (df_ventas['Fecha_Pura'] <= end_date_selected)
