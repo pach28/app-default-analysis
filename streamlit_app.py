@@ -184,14 +184,14 @@ if not data_filtered.empty:
     fig_ventas_producto = px.bar(
         ventas_por_producto,
         x='Producto',
-        y='Monto',
+        y='Precio Total',
         color='Tipo',
         title=f'Análisis de Costos vs Utilidad por Producto ({start_date_selected.strftime("%d/%m/%Y")} - {end_date_selected.strftime("%d/%m/%Y")})',
         color_discrete_map={
             'Costos': '#ff7f7f',
             'Utilidad': '#90EE90'
         },
-        labels={'Monto': 'Importe ($)', 'Producto': 'Producto'}
+        labels={'Precio Total': 'Importe ($)', 'Producto': 'Producto'}
     )
     fig_ventas_producto.update_xaxes(tickangle=45)
 
