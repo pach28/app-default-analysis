@@ -67,8 +67,8 @@ data_filtered = df_ventas[
     df_ventas['Sucursal'].isin(sucursal) &
     df_ventas['Hora'].isin(hora) &
     df_ventas['Nombre_Mes'].isin(mes) &
-    (df_ventas['Fecha_Pura'] >= start_date_selected) &
-    (df_ventas['Fecha_Pura'] <= end_date_selected)
+    (df_ventas['Fecha'] >= start_date_selected) &
+    (df_ventas['Fecha'] <= end_date_selected)
 ]
 
 # --- MÉTRICAS PRINCIPALES ---
