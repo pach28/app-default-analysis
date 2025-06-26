@@ -185,7 +185,7 @@ if not data_filtered.empty:
         ventas_por_producto,
         x='Producto',
         y='Precio Total',
-        color='Tipo',
+        color='Producto',
         title=f'Análisis de Costos vs Utilidad por Producto ({start_date_selected.strftime("%d/%m/%Y")} - {end_date_selected.strftime("%d/%m/%Y")})',
         labels={'Precio Total': 'Importe ($)', 'Producto': 'Producto'}
     )
