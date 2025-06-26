@@ -1,1 +1,17 @@
-streamlit
+# Dashboard Chokorin - Requirements
+# Librerías principales
+streamlit>=1.28.0
+pandas>=1.5.0
+plotly>=5.15.0
+
+# Autenticación
+streamlit-authenticator>=0.3.0
+bcrypt>=4.0.0
+PyJWT>=2.8.0
+
+# Dependencias adicionales para streamlit-authenticator
+PyYAML>=6.0
+cryptography>=41.0.0
+
+# Opcional: Para mejor rendimiento
+numpy>=1.24.0
