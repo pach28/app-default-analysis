@@ -179,11 +179,11 @@ else:
 st.subheader("🛍️ Análisis de Costos y Utilidad por Producto")
 
 if not data_filtered.empty:
-    ventas_por_producto = data_filtered.groupby('Codigo')['Precio Total'].sum().reset_index()
+    ventas_por_producto = data_filtered.groupby('Producto')['Precio Total'].sum().reset_index()
     
     fig_costos_utilidad = px.bar(
         productos_melted,
-        x='Codigo',
+        x='Producto',
         y='Monto',
         color='Tipo',
         title=f'Análisis de Costos vs Utilidad por Producto ({start_date_selected.strftime("%d/%m/%Y")} - {end_date_selected.strftime("%d/%m/%Y")})',
@@ -191,5 +191,5 @@ if not data_filtered.empty:
             'Costos': '#ff7f7f',
             'Utilidad': '#90EE90'
         },
-        labels={'Monto': 'Importe ($)', 'Codigo': 'Producto'}
+        labels={'Monto': 'Importe ($)', 'Producto': 'Producto'}
     )
