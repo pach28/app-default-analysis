@@ -78,7 +78,7 @@ if not data_filtered.empty:
     total_ventas = data_filtered['Precio Total'].sum()
     cantidad_productos_vendidos = data_filtered['Unidades'].sum() if 'Unidades' in data_filtered.columns else len(data_filtered)
     
-    col1, col2 = st.columns(4)
+    col1, col2 = st.columns(2)
     
     with col1:
         st.metric(
