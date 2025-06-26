@@ -187,12 +187,10 @@ if not data_filtered.empty:
         y='Precio Total',
         color='Tipo',
         title=f'Análisis de Costos vs Utilidad por Producto ({start_date_selected.strftime("%d/%m/%Y")} - {end_date_selected.strftime("%d/%m/%Y")})',
-        color_discrete_map={
-            'Costos': '#ff7f7f',
-            'Utilidad': '#90EE90'
-        },
         labels={'Precio Total': 'Importe ($)', 'Producto': 'Producto'}
     )
     fig_ventas_producto.update_xaxes(tickangle=45)
 
     st.plotly_chart(fig_ventas_producto, use_container_width=True)
+else:
+    st.warning("No hay datos para la combinación de filtros seleccionada para el gráfico de productos. Por favor, ajusta los filtros.")
