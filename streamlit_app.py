@@ -193,3 +193,6 @@ if not data_filtered.empty:
         },
         labels={'Monto': 'Importe ($)', 'Producto': 'Producto'}
     )
+    fig_ventas_producto.update_xaxes(tickangle=45)
+
+    st.plotly_chart(fig_ventas_producto, use_container_width=True)
