@@ -181,7 +181,7 @@ st.subheader("🛍️ Análisis de Costos y Utilidad por Producto")
 if not data_filtered.empty:
     ventas_por_producto = data_filtered.groupby('Producto')['Precio Total'].sum().reset_index()
     
-    fig_costos_utilidad = px.bar(
+    fig_ventas_producto = px.bar(
         ventas_por_producto,
         x='Producto',
         y='Monto',
